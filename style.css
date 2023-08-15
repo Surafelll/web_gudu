@@ -1,0 +1,425 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Limelight&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: "Open Sans", sans-serif; */
+}
+body {
+  height: 80vh;
+  background-color: #000;
+  background-image: url("1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+}
+.active {
+  color: #ffffff;
+}
+a:hover {
+  color: #141c1f;
+}
+
+header {
+  margin-left: 100px;
+  position: relative;
+  padding: 2rem;
+}
+.navbar {
+  width: 100%;
+  height: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .links {
+  display: flex;
+  gap: 2rem;
+}
+.navbar .toggle_btn {
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+.action_btn {
+  background-color: #0298c5;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: scale 0.2 ease;
+}
+.action_btn:hover {
+  scale: 1.05;
+  color: #fff;
+}
+
+.action_btn:active {
+  scale: 0.95;
+}
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  height: 0;
+  width: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.dropdown_menu.open {
+  height: 240px;
+}
+.dropdown_menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dropdown_menu .action_btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.home {
+  margin-top: 210px;
+  margin-left: -100px;
+
+  padding: 0 10%;
+  overflow: hidden;
+}
+/* .home-content{
+  
+    max-width: 600px;
+
+} */
+
+.home-content h1 {
+  position: relative;
+  font-size: 30px;
+  font-weight: 700;
+  width: 40%;
+  font-family: inherit;
+  line-height: 1.2;
+}
+
+.home-content h3 {
+  position: relative;
+  font-size: 45px;
+  font-family: inherit;
+  font-weight: 700;
+  color: #ffffff;
+  width: 90%;
+}
+
+.home-content p {
+  position: relative;
+  font-size: 16px;
+  margin: 20px 0 40px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.home-content .btn-box {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 345px;
+  height: 50px;
+}
+
+.btn-box a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 50px;
+  background: #00abf0;
+  border: 2px solid #00abf0;
+  border-radius: 8px;
+  font-size: 19px;
+  color: #081b29;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.btn-box a:hover {
+  color: #00abf0;
+}
+
+.btn-box a:nth-child(2) {
+  background: transparent;
+  color: #00abf0;
+}
+.btn-box a:nth-child(2):hover {
+  color: #081b29;
+}
+
+.btn-box a:nth-child(2)::before {
+  background: #00abf0;
+}
+.btn-box a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #081b29;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.btn-box a:hover::before {
+  width: 100%;
+}
+.home-sci {
+  position: absolute;
+  bottom: 40px;
+  width: 220px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.home-sci a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 2px solid #00abf0;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #00abf0;
+  text-decoration: none;
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.home-sci a:hover {
+  color: #081b29;
+}
+.home-sci a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #00abf0;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.home-sci a:hover:before {
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .navbar .links,
+  .navbar .action_btn {
+    display: none;
+  }
+  .navbar .toggle_btn {
+    display: block;
+  }
+  .dropdown_menu {
+    display: block;
+  }
+  body {
+    background-image: url(1.jpg);
+    height: 1000px;
+  }
+  h1 {
+    font-size: 20px;
+    margin-left: 60px;
+  }
+  h3 {
+    margin-left: 60px;
+    font-size: 22px;
+  }
+  .home-sci {
+    margin-left: 70px;
+  }
+}
+@media (max-width: 576px) {
+  .dropdown_menu {
+    left: 2rem;
+    width: unset;
+  }
+}
+@keyframes showRight {
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes manipActiveHover {
+  100% {
+    pointer-events: auto;
+  }
+}
+@media (max-width: 1700px) {
+  body {
+    background-image: url(1.jpg);
+    height: 931px;
+  }
+  h1 {
+    font-size: 20px;
+    margin-left: 60px;
+  }
+  h3 {
+    margin-left: 60px;
+    font-size: 22px;
+  }
+
+  .btn-box {
+    margin-left: 60px;
+  }
+}
+
+@media (max-width: 800px) {
+  .home-content h1::before {
+    display: none;
+  }
+  .home-content h3::before {
+    display: none;
+  }
+}
+@media (max-width: 300px) {
+  h1 {
+    font-size: 20px;
+    margin-left: 70px;
+  }
+  h3 {
+    font-size: 10px;
+    margin-left: 70px;
+  }
+}
+.button {
+  position: relative;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  background-color: #217770;
+  transition: all 0.2s ease;
+}
+
+.button:active {
+  transform: scale(0.95);
+  -webkit-transform: scale(0.95);
+  -moz-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  -o-transform: scale(0.95);
+}
+
+.button:before,
+.button:after {
+  position: absolute;
+  content: "";
+  width: 150%;
+  left: 50%;
+  height: 100%;
+  transform: translateX(-50%);
+  z-index: -1000;
+  background-repeat: no-repeat;
+}
+
+.button:hover:before {
+  top: -70%;
+  background-image: radial-gradient(circle, #f59e7f 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, #ff7f50 20%, transparent 30%),
+    radial-gradient(circle, #ff7f50 20%, transparent 20%),
+    radial-gradient(circle, #ff7f50 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #ff7f50 15%, transparent 20%),
+    radial-gradient(circle, #ff7f50 20%, transparent 20%),
+    radial-gradient(circle, #ff7f50 20%, transparent 20%),
+    radial-gradient(circle, #ff7f50 20%, transparent 20%),
+    radial-gradient(circle, #ff7f50 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%,
+    10% 10%, 18% 18%;
+  background-position: 50% 120%;
+  animation: orangeTopBubbles 0.6s ease;
+}
+
+@keyframes orangeTopBubbles {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%,
+      40% 90%, 55% 90%, 70% 90%;
+  }
+
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%,
+      50% 50%, 65% 20%, 90% 30%;
+  }
+
+  100% {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%,
+      50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+.button:hover::after {
+  bottom: -70%;
+  background-image: radial-gradient(circle, #f7916c 20%, transparent 20%),
+    radial-gradient(circle, #ff7f50 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, #ff7f50 15%, transparent 20%),
+    radial-gradient(circle, #ff7f50 20%, transparent 20%),
+    radial-gradient(circle, #ff7f50 20%, transparent 20%),
+    radial-gradient(circle, #ff7f50 20%, transparent 20%),
+    radial-gradient(circle, #ff7f50 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+  background-position: 50% 0%;
+  animation: orangeBottomBubbles 0.6s ease;
+}
+
+@keyframes orangeBottomBubbles {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%,
+      70% -10%, 70% 0%;
+  }
+
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%,
+      105% 0%;
+  }
+
+  100% {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%,
+      110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>contact</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" type="text/css" href="asset/contact.css" />
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <ul class="links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gal.html">Gallery</a></li>
+          <li><a class="active" href="contact.html">Contact</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+        <div class="toggle_btn">
+          <i
+            class="fa-solid fa-bars fa-bounce fa-xl"
+            style="color: #000000"
+          ></i>
+        </div>
+      </div>
+      <div class="dropdown_menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gal.html">Gallery</a></li>
+        <li><a class="active" href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </div>
+    </header>
+    <form action="https://formsubmit.co/suraphellll@gmail.com" method="POST">
+      <input type="hidden" name="_template" value="table" />
+      <section>
+        <div class="container">
+          <h2>Get in touch</h2>
+          <div class="row100">
+            <div class="col">
+              <div class="inputBox">
+                <input
+                  type="text"
+                  id="name"
+                  name="First name"
+                  required="required"
+                />
+                <span class="text">First name</span>
+                <span class="line"></span>
+              </div>
+            </div>
+            <div class="col">
+              <div class="inputBox">
+                <input
+                  type="text"
+                  id="name"
+                  name="Last name"
+                  required="required"
+                />
+                <span class="text">Last name</span>
+                <span class="line"></span>
+              </div>
+            </div>
+            <div class="col">
+              <div class="inputBox">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required="required"
+                />
+                <span class="text">Email</span>
+                <span class="line"></span>
+              </div>
+            </div>
+            <div class="col">
+              <div class="inputBox">
+                <input type="number" name="Moblie" required="required" />
+                <span class="text">Moblie</span>
+                <span class="line"></span>
+              </div>
+            </div>
+          </div>
+          <div class="row100">
+            <div class="col">
+              <div class="inputBox textarea">
+                <textarea name="Message" required="required"></textarea>
+                <span class="text">Type your Message Here....</span>
+                <input type="hidden" name="_captcha" value="false" />
+                <input
+                  type="hidden"
+                  name="_next"
+                  value="http://127.0.0.1:5501/contact.html"
+                />
+                <span class="line"></span>
+              </div>
+            </div>
+          </div>
+          <div class="row100">
+            <div class="col">
+              <input type="submit" value="send" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </form>
+    <script>
+      const toggleBtn = document.querySelector(".toggle_btn");
+      const toggleBtnIcon = document.querySelector(".toggle_btn i");
+      const dropDownMenu = document.querySelector(".dropdown_menu");
+
+      toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle("open");
+        const isOpen = dropDownMenu.classList.contains("open");
+        toggleBtnIcon.classList = isOpen
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      };
+    </script>
+  </body>
+</html>

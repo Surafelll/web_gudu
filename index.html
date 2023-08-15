@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+    <style>
+      img {
+        margin-top: 90px;
+        margin-left: -60px;
+        height: 100px;
+        width: 100px;
+        border-radius: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <a href="index.html" class="logo"><img src="1.jpg" alt="" /></a>
+        <ul class="links">
+          <li><button class="button">
+            <a class="active" href="index.html">Home</a></li>
+          </button>
+          <button  class="button">
+          <li><a href="gal.html">Gallery</a></li>
+        </button>
+        <button  class="button">
+          <li><a href="contact.html">Contact</a></li>
+        </button>
+        <button  class="button">
+          <li><a href="about.html">About</a></li>
+        </button>
+         
+        </ul>
+
+        <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+      <div class="dropdown_menu">
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="gal.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </div>
+    </header>
+    <section class="home">
+      <div class="home-content">
+        <h1>Hi, I'm Gudukassa</h1>
+        <h3>Graphics Designer</h3>
+        <p></p>
+        <!-- <div class="btn-box">
+          <a href="about.html">Why me?</a>
+          <a href="1.jpg" download>Download Cv</a>
+        </div> -->
+      </div>
+      <div class="home-sci">
+        <a href="#"><i class="bx bxl-facebook-circle"></i></a>
+        <a href="https://instagram.com/gudukasa_graphix/"
+          ><i class="bx bxl-instagram"></i
+        ></a>
+        <a href="#"><i class="bx bxl-gmail"></i></a>
+        <a href="#"><i class="bx bxl-twitter"></i></a>
+        <a href=""><i class="bx bxl-telegram"></i></a>
+      </div>
+      <!-- <div class="home-imageHover"></div> -->
+    </section>
+    <script>
+      const toggleBtn = document.querySelector(".toggle_btn");
+      const toggleBtnIcon = document.querySelector(".toggle_btn i");
+      const dropDownMenu = document.querySelector(".dropdown_menu");
+
+      toggleBtn.onclick = function () {
+        dropDownMenu.classList.toggle("open");
+        const isOpen = dropDownMenu.classList.contains("open");
+        toggleBtnIcon.classList = isOpen
+          ? "fa-solid fa-xmark"
+          : "fa-solid fa-bars";
+      };
+    </script>
+  </body>
+</html>
